@@ -130,19 +130,19 @@ class pluginclass( object ):
 	def do_standard_items( self ):		
 
 		if ( self.showSoftwareManager == True ):
-			if os.path.exists("/usr/lib/linuxmint/mintInstall/icon.svg"):
-				Button1 = easyButton( "/usr/lib/linuxmint/mintInstall/icon.svg", self.iconsize, [_("Software Manager")], -1, -1 )
-				Button1.connect( "clicked", self.ButtonClicked, "mintinstall" )
+			if os.path.exists("/usr/share/icons/gnome/32x32/apps/system-software-install.png"):
+				Button1 = easyButton( "/usr/share/icons/gnome/32x32/apps/system-software-install.png", self.iconsize, [_("Software Manager")], -1, -1 )
+				Button1.connect( "clicked", self.ButtonClicked, "gpk-application" )
 				Button1.show()
 				self.systemBtnHolder.pack_start( Button1, False, False )
 				self.mintMenuWin.setTooltip( Button1, _("Browse and install available software") )
 
 		if ( self.showPackageManager == True ):
-			Button2 = easyButton( "synaptic", self.iconsize, [_("Package Manager")], -1, -1 )
-			Button2.connect( "clicked", self.ButtonClicked, "gksu /usr/sbin/synaptic" )
+			Button2 = easyButton( "/usr/share/icons/gnome/32x32/apps/system-software-update.png", self.iconsize, [_("Update System")], -1, -1 )
+			Button2.connect( "clicked", self.ButtonClicked, "gpk-update-viewer" )
 			Button2.show()
 			self.systemBtnHolder.pack_start( Button2, False, False )
-			self.mintMenuWin.setTooltip( Button2, _("Install, remove and upgrade software packages") )
+			self.mintMenuWin.setTooltip( Button2, _("Upgrade software packages") )
 
 		if ( self.showControlCenter == True ):
 			Button3 = easyButton( "gtk-preferences", self.iconsize, [_("Control Center")], -1, -1 )
