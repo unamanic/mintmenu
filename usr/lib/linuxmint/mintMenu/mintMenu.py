@@ -22,7 +22,7 @@ except Exception, e:
 global mbindkey
 # Load the key binding lib (developped by deskbar-applet, copied into mintMenu so we don't end up with an unnecessary dependency)
 try:
-	sys.path.append('/usr/lib/pyshared/python2.6/deskbar/core/keybinder')
+	sys.path.append('/usr/lib64/python2.6/site-packages/deskbar/core/keybinder')
         from _keybinder import tomboy_keybinder_bind as bind_key
 except Exception, cause:
         print "*********** Keybind Driver Load Failure **************"
@@ -30,13 +30,13 @@ except Exception, cause:
         pass
 
 # Rename the process
-try:
-	import dl
-	libc = dl.open( "/lib/libc.so.6" )
-	libc.call( "prctl", 15, "mintmenu", 0, 0, 0 )
-	libc.close()
-except ImportError:
-	pass
+#try:
+#	import dl
+#	libc = dl.open( "/lib/libc.so.6" )
+#	libc.call( "prctl", 15, "mintmenu", 0, 0, 0 )
+#	libc.close()
+#except ImportError:
+#	pass
 
 # i18n
 gettext.install("mintmenu", "/usr/share/linuxmint/locale")
