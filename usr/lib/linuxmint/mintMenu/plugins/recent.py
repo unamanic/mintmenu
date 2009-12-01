@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import gtk
 import gtk.glade
 import sys
