@@ -42,7 +42,7 @@ gettext.install("mintmenu", "/usr/share/linuxmint/locale")
 
 NAME = _("Menu")
 PATH = os.path.abspath( os.path.dirname( sys.argv[0] ) )
-ICON = "/usr/lib/linuxmint/mintMenu/mintMenu.png"
+ICON = "/usr/share/icons/Bluecurve/24x24/apps/icon-panel-menu.png"
 
 sys.path.append( os.path.join( PATH , "plugins") )
 
