@@ -564,7 +564,7 @@ class pluginclass( object ):
 					if (shown):
 						showns = True
 
-				if (not showns and os.path.exists("/usr/lib/linuxmint/mintInstall/icon.svg")):					
+				if (not showns and os.path.exists("/usr/share/linuxmint/mintInstall/icon.svg")):					
 					self.suggestion = text
 
 					self.applicationsBox.add(self.suggestSearchAppButton)					
@@ -853,7 +853,7 @@ class pluginclass( object ):
 			from user import home			
 			if (not os.path.exists(home + "/.linuxmint/mintMenu/applications.list")):
 				os.system("mkdir -p " + home + "/.linuxmint/mintMenu/applications")
-				os.system("cp /usr/lib/linuxmint/mintMenu/applications.list " + home + "/.linuxmint/mintMenu/applications.list")
+				os.system("cp /usr/share/linuxmint/mintMenu/applications.list " + home + "/.linuxmint/mintMenu/applications.list")
 
 			applicationsFile = open ( os.path.join( os.path.expanduser( "~" ), ".linuxmint", "mintMenu", "applications.list" ), "r" )
 			applicationsList = applicationsFile.readlines()

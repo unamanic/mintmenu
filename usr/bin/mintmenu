@@ -8,5 +8,5 @@ if len(sys.argv) > 1:
 		os.system("gconftool-2 --recursive-unset /apps/mintMenu")
 		os.system("rm -rf ~/.linuxmint/mintMenu")
 else:
-	os.system("/usr/lib/linuxmint/mintMenu/mintMenu.py run-in-window")
+	os.system("/usr/share/linuxmint/mintMenu/mintMenu.py run-in-window")
 

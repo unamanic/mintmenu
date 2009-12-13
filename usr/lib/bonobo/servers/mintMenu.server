@@ -1,6 +1,6 @@
 <oaf_info>
 <oaf_server iid="OAFIID:GNOME_mintMenu_Factory"
-            type="exe" location="/usr/lib/linuxmint/mintMenu/mintMenu.py">
+            type="exe" location="/usr/share/linuxmint/mintMenu/mintMenu.py">
 
         <oaf_attribute name="repo_ids" type="stringv">
                 <item value="IDL:Bonobo/GenericFactory:1.0"/>
