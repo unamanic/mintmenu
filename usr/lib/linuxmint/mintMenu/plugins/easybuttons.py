@@ -386,7 +386,7 @@ class ApplicationLauncher( easyButton ):
 				Execute(self.appExec)
 
 	def uninstall (self, *args ):
-		Execute("mintRemove.py " + self.desktopFile)
+		Execute("/usr/lib/linuxmint/mintmenu/mintRemove.py " + self.desktopFile)
 
 	# IconTheme changed, setup new icons for button and drag 'n drop
 	def iconChanged( self ):
